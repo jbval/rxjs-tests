@@ -17,9 +17,9 @@ export class SimpleReactiveFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
-      isOrganization: false
+      candEdit: false
     });
-    this.permissions$ = this.formGroup.get('isOrganization').valueChanges.pipe(
+    this.permissions$ = this.formGroup.get('candEdit').valueChanges.pipe(
       watch('formChange', 10),
       map(isOrg => (isOrg ? ['View', 'Edit'] : ['View'])),
       watch('permissions', 10)

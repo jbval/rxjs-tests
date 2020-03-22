@@ -1,7 +1,16 @@
 <h2>Form simple avec gestion du changement</h2>
+Activer l'extension Chrom RxJs Watcher pour voir les flux se créer :
+<a
+  href="https://chrome.google.com/webstore/detail/rxjs-watcher/dfpjfjpfpjjgoeackldilanadoeaciam"
+  >https://github.com/xripcsu/rxjs-watcherExtension </a
+><br />
+<a href="https://github.com/xripcsu/rxjs-watcher"> Projet</a>
 <div [formGroup]="formGroup">
-  <input type="checkbox" formControlName="isOrganization" /> Is Organization
-  <p *ngFor="let item of permissions$ | async">
-    {{ item }}
-  </p>
+  <input type="checkbox" formControlName="candEdit" /> Can Edit ?
+  <div *ngIf="permissions$ | async as permissions">
+    <h3>Permissions</h3>
+    <p *ngFor="let item of permissions">
+      {{ item }}
+    </p>
+  </div>
 </div>
