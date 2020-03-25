@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SimpleReactiveFormComponent } from './simple-reactive-form/simple-reactive-form.component';
+import { SharedReplayComponent } from './shared-replay/shared-replay.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleReactiveFormComponent
+    SimpleReactiveFormComponent,
+    SharedReplayComponent
   ],
   imports: [
     BrowserModule,
